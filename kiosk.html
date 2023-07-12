@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .inputbox{
+        width: 60px;
+        height: 30px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .tb3 {
+        background-color: coral;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .tb{
+        background-color: gold;
+    }
+
+    .tb1{
+        background-color: maroon;
+        border-radius: 20px;
+        font-size: 30px;
+        color: aliceblue;
+     
+    }
+
+    .tb2{
+        background-color: coral;
+    }
+
+    .tb4{
+        font-weight: bold;
+        font-size: 20px ;
+    }
+</style>
+<body>
+    <table border="1" class="tb">
+        <tr>
+            <td align="center" class="tb4"><img src="chi1.png" width="150" height="200" ><br>
+                후라이드<br>17000원<br>
+                <button id = "fryminus" class="tb3">-</button><input type="text" id ="fryinput" class="inputbox"><button id="fryplus" class="tb3">+</button></td>
+            <td align="center" class="tb4"><img src="chi2.png" width="150" height="200"><br>
+                양념치킨<br>18000원<br>
+                <button id = "yangminus" class="tb3">-</button><input type="text" id = "yanginput" class="inputbox"><button id="yangplus" class="tb3">+</button></td>
+            <td align="center" class="tb4"><img src="chi3.png" width="150" height="200"><br>
+                뿌링클<br>18000원<br>
+                <button id = "bbuminus" class="tb3">-</button><input type="text" id="bbuinput" class="inputbox"><button id="bbuplus" class="tb3">+</button></td>
+            <td align="center" class="tb4"><img src="chi4.png" width="150" height="200"><br>
+                맛초킹<br>18000원<br>
+                <button id = "machominus" class="tb3">-</button><input type="text" id="machoinput" class="inputbox"><button id="machoplus" class="tb3">+</button></td>
+            <td align="center" class="tb4"><img src="cola.png" width="150" height="200"><br>
+                콜라/사이다<br>2000원<br>
+                <button id = "colaminus" class="tb3">-</button><input type="text" id="colainput" class="inputbox"><button id="colaplus" class="tb3">+</button></td>
+        </tr>
+        <tr>
+            <td align="center" class="tb4"><img src="chi5.png" width="150" height="200"><br>
+                레드킹<br>19000원<br>
+                <button id="redminus" class="tb3">-</button><input type="text" id="redinput" class="inputbox"><button id="redplus" class="tb3">+</button></td>
+            <td align="center" class="tb4"><img src="chi6.png" width="150" height="200"><br>
+                커리퀸<br>18000원<br>
+                <button id="curminus" class="tb3">-</button><input type="text" id="curinput" class="inputbox"><button id="curplus" class="tb3">+</button></td>
+            <td align="center" class="tb4"><img src="chi7.png" width="150" height="200"><br>
+                골드킹<br>17000원<br>
+                <button id="goldminus" class="tb3">-</button><input type="text" id="goldinput" class="inputbox"><button id="goldplus" class="tb3">+</button></td>
+            <td align="center" class="tb4"><img src="chi8.png" width="150" height="200"><br>
+                포테킹<br>19000원<br>
+                <button id="potaminus" class="tb3">-</button><input type="text" id="potainput" class="inputbox"><button id="potaplus" class="tb3">+</button></td>
+            <td align="center" class="tb4"><img src="beer.png" width="150" height="200"><br>
+                맥주<br>3800원<br>
+                <button id = "beerminus" class="tb3">-</button><input type="text" id="beerinput" class="inputbox"><button id="beerplus" class="tb3">+</button></td>        
+
+        </tr>
+        <tr>
+            <td align="center" colspan="3" height="60" class="tb2"><button id="btn_set_clear" class="tb1">초기화</button></td>
+            <td align="center" colspan="2" height="60" class="tb2"><button id="btn_total_commit" class="tb1">계산</button></td>
+        </tr>
+    </table>
+    <script>
+        fried_input = document.getElementById("fryinput");
+        fried_input.value = 0;
+        document.getElementById("fryplus").addEventListener('click',fryplus);
+        document.getElementById("fryminus").addEventListener('click',fryminus);
+
+        yang_input = document.getElementById("yanginput");
+        yang_input.value = 0;
+        document.getElementById("yangplus").addEventListener('click',yangplus);
+        document.getElementById("yangminus").addEventListener('click',yangminus);
+
+        bbu_input = document.getElementById("bbuinput");
+        bbu_input.value = 0;
+        document.getElementById("bbuplus").addEventListener('click',bbuplus);
+        document.getElementById("bbuminus").addEventListener('click',bbuminus);
+        
+        macho_input = document.getElementById("machoinput");
+        macho_input.value = 0;
+        document.getElementById("machoplus").addEventListener('click',machoplus);
+        document.getElementById("machominus").addEventListener('click',machominus);
+
+        red_input = document.getElementById("redinput");
+        red_input.value = 0;
+        document.getElementById("redplus").addEventListener('click',redplus);
+        document.getElementById("redminus").addEventListener('click',redminus);
+
+        cur_input = document.getElementById("curinput");
+        cur_input.value = 0;
+        document.getElementById("curplus").addEventListener('click',curplus);
+        document.getElementById("curminus").addEventListener('click',curminus);
+
+        gold_input = document.getElementById("goldinput");
+        gold_input.value = 0;
+        document.getElementById("goldplus").addEventListener('click',goldplus);
+        document.getElementById("goldminus").addEventListener('click',goldminus);
+
+        pota_input = document.getElementById("potainput");
+        pota_input.value = 0;
+        document.getElementById("potaplus").addEventListener('click',potaplus);
+        document.getElementById("potaminus").addEventListener('click',potaminus);
+
+        cola_input = document.getElementById("colainput");
+        cola_input.value = 0;
+        document.getElementById("colaplus").addEventListener('click',colaplus);
+        document.getElementById("colaminus").addEventListener('click',colaminus);
+
+        beer_input = document.getElementById("beerinput");
+        beer_input.value = 0;
+        document.getElementById("beerplus").addEventListener('click',beerplus);
+        document.getElementById("beerminus").addEventListener('click',beerminus);
+        
+        document.getElementById("btn_total_commit").addEventListener('click',on_btn_total_commit);
+        document.getElementById("btn_set_clear").addEventListener('click',on_btn_set_clear);
+
+        function fryplus(){
+            fried_input.value++;
+        }
+        function fryminus(){
+            if(fried_input.value>0){
+                fried_input.value--;
+            }            
+        }
+
+        function yangplus(){
+            yang_input.value++;
+        }
+        function yangminus(){
+            if(yang_input.value>0){
+                yang_input.value--;
+            }            
+        }
+
+        function bbuplus(){
+            bbu_input.value++;
+        }
+        function bbuminus(){
+            if(bbu_input.value>0){
+                bbu_input.value--;
+            }            
+        }
+
+        function machoplus(){
+            macho_input.value++;
+        }
+        function machominus(){
+            if(macho_input.value>0){
+                macho_input.value--;
+            }            
+        }
+
+        function redplus(){
+            red_input.value++;
+        }
+        function redminus(){
+            if(red_input.value>0){
+                red_input.value--;
+            }            
+        }
+        
+        function curplus(){
+            cur_input.value++;
+        }
+        function curminus(){
+            if(cur_input.value>0){
+                cur_input.value--;
+            }            
+        }
+                
+        function goldplus(){
+            gold_input.value++;
+        }
+        function goldminus(){
+            if(gold_input.value>0){
+                gold_input.value--;
+            }            
+        }
+                       
+        function potaplus(){
+            pota_input.value++;
+        }
+        function potaminus(){
+            if(pota_input.value>0){
+                pota_input.value--;
+            }            
+        }
+
+        function colaplus(){
+            cola_input.value++;
+        }
+        function colaminus(){
+            if(cola_input.value>0){
+                cola_input.value--;
+            }            
+        }
+
+        function beerplus(){
+            beer_input.value++;
+        }
+        function beerminus(){
+            if(beer_input.value>0){
+                beer_input.value--;
+            }            
+        }
+
+
+        function on_btn_total_commit(){
+            friedmon=17000* fried_input.value;
+            yangmon=18000* yang_input.value;
+            bbumon=18000*bbu_input.value;
+            machomon=18000*macho_input.value;
+            redmon=19000*red_input.value;
+            curmon=18000*cur_input.value;
+            goldmon=17000*gold_input.value;
+            potamon=19000*pota_input.value
+            colamon=2000*cola_input.value;
+            beermon=3800*beer_input.value;
+            sum = friedmon+yangmon+bbumon+machomon+redmon+curmon+goldmon+potamon+colamon+beermon;
+            com = sum
+            comma = com.toLocaleString('ko-KR');
+
+            alert("총 가격은 "+comma+"원 입니다.");
+            fried_input.value='';
+            yang_input.value='';
+            bbu_input.value='';
+            macho_input.value='';
+            red_input.value='';
+            cur_input.value='';
+            gold_input.value='';
+            pota_input.value='';
+            cola_input.value='';
+            beer_input.value='';
+        }
+        function on_btn_set_clear(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>

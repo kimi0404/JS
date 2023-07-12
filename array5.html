@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr_1=["수원","병점","의왕","군포"];
+        var arr_2=["세류","세마"];
+        var arr_3=[4,5,6,1,2,3,7,8,9];
+        var arr_4=["abc","가나다","+_+",123];
+        var result;
+        result=arr_1.join("--");
+        document.write("Join -- 연결 : "+result);
+        document.write("<br><br>");
+        result=arr_1.concat(arr_2);
+        document.write("Concat 배열 합치기 : "+result);
+        document.write("<br><br>");
+        var up=result.sort();
+        document.write("오름차순 Sort : "+up);
+        document.write("<br><br>");
+        document.write("arr_4 정렬 : "+arr_4.sort());
+        document.write("<br><br>");
+        var down = arr_4.sort((a,b)=>b-a);
+        document.write("내림차순 Sort : "+down);
+        document.write("<br><br>");
+        
+
+    </script>
+</body>
+</html>
