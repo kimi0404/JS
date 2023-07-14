@@ -7,9 +7,9 @@
 </head>
 <style>
     .inputbox{
-        width: 60px;
-        height: 30px;
-        font-size: 30px;
+        width: 30px;
+        height: 15px;
+        font-size: 15px;
         text-align: center;
     }
 
@@ -24,6 +24,7 @@
     .tb{
         background-color: gold;
     }
+
 
     .tb1{
         background-color: maroon;
@@ -41,50 +42,106 @@
         font-weight: bold;
         font-size: 20px ;
     }
+
+
 </style>
 <body>
+
+
     <table border="1" class="tb">
         <tr>
-            <td align="center" class="tb4"><img src="chi1.png" width="150" height="200" ><br>
-                후라이드<br>17000원<br>
+            <td align="center" class="tb4"><img src="chi1.png" width="150" height="150" ><br>
+                후라이드치킨<br>17000원<br>
+                <input id="fryfull" name="fry_Type" type="radio" value="full" checked="checked">FULL
+                <input id="fryhalf" name="fry_Type" type="radio" value="half" >HALF
                 <button id = "fryminus" class="tb3">-</button><input type="text" id ="fryinput" class="inputbox"><button id="fryplus" class="tb3">+</button></td>
-            <td align="center" class="tb4"><img src="chi2.png" width="150" height="200"><br>
-                양념치킨<br>18000원<br>
+            <td align="center" class="tb4"><img src="chi2.png" width="150" height="150"><br>
+                양념치킨<br>18000원<br>                
+                <input id="yangfull" name="yang_Type" type="radio" value="full" checked="checked">FULL
+                <input id="yanghalf" name="yang_Type" type="radio" value="half" >HALF
                 <button id = "yangminus" class="tb3">-</button><input type="text" id = "yanginput" class="inputbox"><button id="yangplus" class="tb3">+</button></td>
-            <td align="center" class="tb4"><img src="chi3.png" width="150" height="200"><br>
+            <td align="center" class="tb4"><img src="chi3.png" width="150" height="150"><br>
                 뿌링클<br>18000원<br>
+                <input id="bbufull" name="bbu_Type" type="radio" value="full" checked="checked">FULL
+                <input id="bbuhalf" name="bbu_Type" type="radio" value="half" >HALF
                 <button id = "bbuminus" class="tb3">-</button><input type="text" id="bbuinput" class="inputbox"><button id="bbuplus" class="tb3">+</button></td>
-            <td align="center" class="tb4"><img src="chi4.png" width="150" height="200"><br>
+            <td align="center" class="tb4"><img src="chi4.png" width="150" height="150"><br>
                 맛초킹<br>18000원<br>
+                <input id="machofull" name="macho_Type" type="radio" value="full" checked="checked">FULL
+                <input id="machohalf" name="macho_Type" type="radio" value="half" >HALF
                 <button id = "machominus" class="tb3">-</button><input type="text" id="machoinput" class="inputbox"><button id="machoplus" class="tb3">+</button></td>
-            <td align="center" class="tb4"><img src="cola.png" width="150" height="200"><br>
-                콜라/사이다<br>2000원<br>
+            <td align="center" class="tb4"><img src="cola.png" width="150" height="150"><br>
+                콜라<br>2000원<br>
+                <br>
                 <button id = "colaminus" class="tb3">-</button><input type="text" id="colainput" class="inputbox"><button id="colaplus" class="tb3">+</button></td>
+            <td rowspan="2" width="300" height="150"><img src="ad01.JPG" alt="ad01.JPG" id="Slide" ></td>    
         </tr>
         <tr>
-            <td align="center" class="tb4"><img src="chi5.png" width="150" height="200"><br>
+            <td align="center" class="tb4"><img src="chi5.png" width="150" height="150"><br>
                 레드킹<br>19000원<br>
+                <input id="redfull" name="red_Type" type="radio" value="full" checked="checked">FULL
+                <input id="redhalf" name="red_Type" type="radio" value="half" >HALF
                 <button id="redminus" class="tb3">-</button><input type="text" id="redinput" class="inputbox"><button id="redplus" class="tb3">+</button></td>
-            <td align="center" class="tb4"><img src="chi6.png" width="150" height="200"><br>
+            <td align="center" class="tb4"><img src="chi6.png" width="150" height="150"><br>
                 커리퀸<br>18000원<br>
+                <input id="curfull" name="cur_Type" type="radio" value="full" checked="checked">FULL
+                <input id="curhalf" name="cur_Type" type="radio" value="half" >HALF
                 <button id="curminus" class="tb3">-</button><input type="text" id="curinput" class="inputbox"><button id="curplus" class="tb3">+</button></td>
-            <td align="center" class="tb4"><img src="chi7.png" width="150" height="200"><br>
+            <td align="center" class="tb4"><img src="chi7.png" width="150" height="150"><br>
                 골드킹<br>17000원<br>
+                <input id="goldfull" name="gold_Type" type="radio" value="full" checked="checked">FULL
+                <input id="goldhalf" name="gold_Type" type="radio" value="half" >HALF
                 <button id="goldminus" class="tb3">-</button><input type="text" id="goldinput" class="inputbox"><button id="goldplus" class="tb3">+</button></td>
-            <td align="center" class="tb4"><img src="chi8.png" width="150" height="200"><br>
+            <td align="center" class="tb4"><img src="chi8.png" width="150" height="150"><br>
                 포테킹<br>19000원<br>
+                <input id="potafull" name="pota_Type" type="radio" value="full" checked="checked">FULL
+                <input id="potahalf" name="pota_Type" type="radio" value="half" >HALF
                 <button id="potaminus" class="tb3">-</button><input type="text" id="potainput" class="inputbox"><button id="potaplus" class="tb3">+</button></td>
-            <td align="center" class="tb4"><img src="beer.png" width="150" height="200"><br>
+            <td align="center" class="tb4"><img src="beer.png" width="150" height="150"><br>
                 맥주<br>3800원<br>
-                <button id = "beerminus" class="tb3">-</button><input type="text" id="beerinput" class="inputbox"><button id="beerplus" class="tb3">+</button></td>        
-
+                <br>
+                <button id = "beerminus" class="tb3">-</button><input type="text" id="beerinput" class="inputbox"><button id="beerplus" class="tb3">+</button></td>
         </tr>
         <tr>
             <td align="center" colspan="3" height="60" class="tb2"><button id="btn_set_clear" class="tb1">초기화</button></td>
-            <td align="center" colspan="2" height="60" class="tb2"><button id="btn_total_commit" class="tb1">계산</button></td>
+            <td align="center" colspan="3" height="60" class="tb2"><button id="btn_total_commit" class="tb1">계산</button></td>           
         </tr>
+
+        <script>
+            let slide = document.getElementById("Slide");
+            let imgArr = ["ad01.JPG", "ad02.JPG", "ad03.JPG"];
+        
+            setInterval(()=>{
+            let ranNum = Math.floor(Math.random() * imgArr.length);
+                slide.src= imgArr[ranNum];
+            },2000);
+            </script>
+
     </table>
+        <div style="background-color: rgb(243, 248, 248);" id="fry_logs"></div>
+        <div style="background-color: rgb(243, 248, 248);" id="yang_logs"></div>
+        <div style="background-color: rgb(243, 248, 248);" id="bbu_logs"></div>
+        <div style="background-color: rgb(243, 248, 248);" id="macho_logs"></div>
+        <div style="background-color: rgb(243, 248, 248);" id="red_logs"></div>
+        <div style="background-color: rgb(243, 248, 248);" id="cur_logs"></div>
+        <div style="background-color: rgb(243, 248, 248);" id="gold_logs"></div>
+        <div style="background-color: rgb(243, 248, 248);" id="pota_logs"></div>
+        <div style="background-color: rgb(243, 248, 248);" id="cola_logs"></div>
+        <div style="background-color: rgb(243, 248, 248);" id="beer_logs"></div>
     <script>
+
+
+        const $fry_logs = document.querySelector('#fry_logs');
+        const $yang_logs = document.querySelector('#yang_logs');
+        const $bbu_logs = document.querySelector('#bbu_logs');
+        const $macho_logs = document.querySelector('#macho_logs');
+        const $red_logs = document.querySelector('#red_logs');
+        const $cur_logs = document.querySelector('#cur_logs');
+        const $gold_logs = document.querySelector('#gold_logs');
+        const $pota_logs = document.querySelector('#pota_logs');
+        const $cola_logs = document.querySelector('#cola_logs');
+        const $beer_logs = document.querySelector('#beer_logs');
+
         fried_input = document.getElementById("fryinput");
         fried_input.value = 0;
         document.getElementById("fryplus").addEventListener('click',fryplus);
@@ -230,35 +287,174 @@
 
 
         function on_btn_total_commit(){
-            friedmon=17000* fried_input.value;
-            yangmon=18000* yang_input.value;
-            bbumon=18000*bbu_input.value;
-            machomon=18000*macho_input.value;
-            redmon=19000*red_input.value;
-            curmon=18000*cur_input.value;
-            goldmon=17000*gold_input.value;
-            potamon=19000*pota_input.value
+
+            var fry_radio = document.getElementsByName("fry_Type");
+            var fry_value="";
+            for(var i=0;i<fry_radio.length;i++){
+                if(fry_radio[i].checked){
+                    fry_value = fry_radio[i].value;
+                }                
+            }
+            friedmon=17000;
+            if(fry_value=="half"){
+                friedmon=8500;
+            }
+
+            var yang_radio = document.getElementsByName("yang_Type");
+            var yang_value="";
+            for(var i=0;i<yang_radio.length;i++){
+                if(yang_radio[i].checked){
+                    yang_value = yang_radio[i].value;
+                }                
+            }
+            yangmon=18000;
+            if(yang_value=="half"){
+                yangmon=9000;
+            }
+
+            var bbu_radio = document.getElementsByName("bbu_Type");
+            var bbu_value="";
+            for(var i=0;i<bbu_radio.length;i++){
+                if(bbu_radio[i].checked){
+                    bbu_value = bbu_radio[i].value;
+                }                
+            }
+            bbumon=18000;
+            if(bbu_value=="half"){
+                bbumon=9000;
+            }
+
+            var macho_radio = document.getElementsByName("macho_Type");
+            var macho_value="";
+            for(var i=0;i<macho_radio.length;i++){
+                if(macho_radio[i].checked){
+                    macho_value = macho_radio[i].value;
+                }                
+            }
+            machomon=18000;
+            if(macho_value=="half"){
+                machomon=9000;
+            }
+
+            var red_radio = document.getElementsByName("red_Type");
+            var red_value="";
+            for(var i=0;i<red_radio.length;i++){
+                if(red_radio[i].checked){
+                    red_value = red_radio[i].value;
+                }                
+            }
+            redmon=19000;
+            if(red_value=="half"){
+                redmon=9500;
+            }
+
+            var cur_radio = document.getElementsByName("cur_Type");
+            var cur_value="";
+            for(var i=0;i<cur_radio.length;i++){
+                if(cur_radio[i].checked){
+                    cur_value = cur_radio[i].value;
+                }                
+            }
+            curmon=18000;
+            if(cur_value=="half"){
+                curmon=9000;
+            }
+
+            var gold_radio = document.getElementsByName("gold_Type");
+            var gold_value="";
+            for(var i=0;i<gold_radio.length;i++){
+                if(gold_radio[i].checked){
+                    gold_value = gold_radio[i].value;
+                }                
+            }
+            goldmon=17000;
+            if(gold_value=="half"){
+                goldmon=8500;
+            }
+
+            var pota_radio = document.getElementsByName("pota_Type");
+            var pota_value="";
+            for(var i=0;i<pota_radio.length;i++){
+                if(pota_radio[i].checked){
+                    pota_value = pota_radio[i].value;
+                }                
+            }
+            potamon=19000;
+            if(pota_value=="half"){
+                potamon=9500;
+            }
+
             colamon=2000*cola_input.value;
             beermon=3800*beer_input.value;
-            sum = friedmon+yangmon+bbumon+machomon+redmon+curmon+goldmon+potamon+colamon+beermon;
+            sum = (friedmon*fried_input.value)+(yangmon*yang_input.value)+(bbumon*bbu_input.value)+(machomon*macho_input.value)+(redmon*red_input.value)+(curmon*cur_input.value)+(goldmon*gold_input.value)+(potamon*pota_input.value)+colamon+beermon;
             com = sum
             comma = com.toLocaleString('ko-KR');
 
             alert("총 가격은 "+comma+"원 입니다.");
-            fried_input.value='';
-            yang_input.value='';
-            bbu_input.value='';
-            macho_input.value='';
-            red_input.value='';
-            cur_input.value='';
-            gold_input.value='';
-            pota_input.value='';
-            cola_input.value='';
-            beer_input.value='';
+
+            $fry_logs.innerText='';
+            $yang_logs.innerText='';
+            $bbu_logs.innerText='';
+            $macho_logs.innerText='';
+            $red_logs.innerText='';
+            $cur_logs.innerText='';
+            $gold_logs.innerText='';
+            $pota_logs.innerText='';
+            $cola_logs.innerText='';
+            $beer_logs.innerText='';
+
+
+
+            if(fried_input.value>0){
+                $fry_logs.append("후라이드치킨"+' : '+fried_input.value+'개 '+ (friedmon * fried_input.value) +'원',document.createElement('br'));       
+            }
+            if(yang_input.value>0){
+                $yang_logs.append("양념치킨"+' : '+yang_input.value+'개 '+ (yangmon * yang_input.value) +'원',document.createElement('br'));       
+            }   
+            if(bbu_input.value>0){
+                $bbu_logs.append("뿌링클치킨"+' : '+bbu_input.value+'개 '+ (bbumon * bbu_input.value) +'원',document.createElement('br'));       
+            }
+            if(macho_input.value>0){
+                $macho_logs.append("맛초킹치킨"+' : '+macho_input.value+'개 '+ (machomon * macho_input.value) +'원',document.createElement('br'));       
+            }
+            if(red_input.value>0){
+                $red_logs.append("레드킹치킨"+' : '+red_input.value+'개 '+ (redmon * red_input.value) +'원',document.createElement('br'));       
+            }
+            if(cur_input.value>0){
+                $red_logs.append("커리퀸치킨"+' : '+cur_input.value+'개 '+ (curmon * cur_input.value) +'원',document.createElement('br'));       
+            }
+            if(gold_input.value>0){
+                $gold_logs.append("골드킹치킨"+' : '+gold_input.value+'개 '+ (goldmon * gold_input.value) +'원',document.createElement('br'));       
+            }
+            if(pota_input.value>0){
+                $pota_logs.append("포테킹치킨"+' : '+pota_input.value+'개 '+ (potamon * pota_input.value) +'원',document.createElement('br'));       
+            }
+
+            if(cola_input.value>0){
+                $cola_logs.append("콜라"+' : '+cola_input.value+'개 '+ (colamon * cola_input.value) +'원',document.createElement('br'));       
+            }
+
+            if(beer_input.value>0){
+                $beer_logs.append("맥주"+' : '+beer_input.value+'개 '+ (beermon * beer_input.value) +'원',document.createElement('br'));       
+            }
+       
+            fried_input.value='0';
+            yang_input.value='0';
+            bbu_input.value='0';
+            macho_input.value='0';
+            red_input.value='0';
+            cur_input.value='0';
+            gold_input.value='0';
+            pota_input.value='0';
+            cola_input.value='0';
+            beer_input.value='0';
+            
         }
+
         function on_btn_set_clear(){
             location.reload();
         }
+
     </script>
 </body>
 </html>
